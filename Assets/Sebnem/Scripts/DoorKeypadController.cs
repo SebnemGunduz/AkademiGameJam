@@ -16,7 +16,7 @@ public class DoorKeypadController : MonoBehaviour
     private void Start()
     {
         codeText.text = "";
-        codeText.color = Color.white;
+        
     }
 
     public void OnDialButtonPressed(string buttonValue)
@@ -25,7 +25,7 @@ public class DoorKeypadController : MonoBehaviour
         {
             enteredCode += buttonValue;
             codeText.text = enteredCode;
-            codeText.color = Color.white;
+           
         }
     }
 
@@ -33,7 +33,7 @@ public class DoorKeypadController : MonoBehaviour
     {
         enteredCode = "";
         codeText.text = "";
-        codeText.color = Color.white;
+        
     }
 
     public void CheckPassword()

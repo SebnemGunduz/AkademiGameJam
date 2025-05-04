@@ -30,7 +30,7 @@ public class PhoneController : MonoBehaviour
 
     private void Update()
     {
-        GameObject catObject = GameObject.FindWithTag("Cat");
+        GameObject catObject = GameObject.FindWithTag("Adult");
 
         if (catObject != null && !phoneButton.activeSelf)
         {
