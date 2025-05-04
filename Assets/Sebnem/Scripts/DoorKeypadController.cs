@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class DoorKeypadController : MonoBehaviour
 {
@@ -56,7 +57,7 @@ public class DoorKeypadController : MonoBehaviour
         audioSource.Play();
         codeText.color = Color.green;
         yield return new WaitForSeconds(0.7f);
-        // Burada ekstra bir iþlem yok çünkü sadece ses çalýyoruz
+        SceneManager.LoadScene("Part4");
         Debug.Log("Doðru þifre girildi!");
     }
 

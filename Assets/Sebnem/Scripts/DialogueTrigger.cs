@@ -3,6 +3,6 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public List<DialogueData> dogDialogues;
-    public List<DialogueData> catDialogues;
+    public List<DialogueData> AdultDialogues;
+    public List<DialogueData> ChildDialogues;
 }

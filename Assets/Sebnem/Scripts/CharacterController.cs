@@ -14,8 +14,8 @@ public class CharacterSwitcher : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         // Ýlk durum
-        animator.Play("IdleDog");
-        gameObject.tag = "Dog";
+        animator.Play("IdleAdult");
+        gameObject.tag = "Adult";
     }
 
     void Update()
@@ -27,13 +27,13 @@ public class CharacterSwitcher : MonoBehaviour
 
             if (isDog)
             {
-                animator.Play("IdleDog");
-                gameObject.tag = "Dog";
+                animator.Play("IdleAdult");
+                gameObject.tag = "Adult";
             }
             else
             {
-                animator.Play("IdleCat");
-                gameObject.tag = "Cat";
+                animator.Play("IdleChild");
+                gameObject.tag = "Child";
             }
         }
 
@@ -49,17 +49,17 @@ public class CharacterSwitcher : MonoBehaviour
 
             // Hareket animasyonlarý
             if (isDog)
-                animator.Play("RunDog");
+                animator.Play("RunAdult");
             else
-                animator.Play("RunCat");
+                animator.Play("RunChild");
         }
         else
         {
             // Idle animasyonlarý
             if (isDog)
-                animator.Play("IdleDog");
+                animator.Play("IdleAdult");
             else
-                animator.Play("IdleCat");
+                animator.Play("IdleChild");
         }
     }
 }
