@@ -22,6 +22,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(DialogueTrigger trigger, string characterTag)
     {
+        // Trigger’dan doðru listeyi al
         if (characterTag == "Dog")
             currentDialogues = trigger.dogDialogues;
         else if (characterTag == "Cat")
@@ -31,7 +32,7 @@ public class DialogueManager : MonoBehaviour
             return;
 
         currentIndex = 0;
-        dialoguePanel.SetActive(true);  // Paneli açýyoruz
+        dialoguePanel.SetActive(true);
         ShowDialogue(currentIndex);
     }
 
@@ -43,9 +44,9 @@ public class DialogueManager : MonoBehaviour
 
     private void NextDialogue()
     {
-        currentIndex++;
-        if (currentIndex < currentDialogues.Count)
+        if (currentIndex + 1 < currentDialogues.Count)
         {
+            currentIndex++;
             ShowDialogue(currentIndex);
         }
         else
@@ -53,4 +54,5 @@ public class DialogueManager : MonoBehaviour
             dialoguePanel.SetActive(false);
         }
     }
+
 }
