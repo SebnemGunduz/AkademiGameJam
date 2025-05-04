@@ -5,7 +5,6 @@ using TMPro;
 public class PhoneController : MonoBehaviour
 {
     public GameObject phoneButton;
-    public GameObject phonePanel;
     public GameObject callPanel;
     public GameObject dialogPanel;
     public GameObject characterObject; // Inspector'dan atayacaðýn karakter
@@ -45,21 +44,18 @@ public class PhoneController : MonoBehaviour
 
     private void Start()
     {
-        phonePanel.SetActive(false);
+        
         callPanel.SetActive(false);
         dialogPanel.SetActive(false);
 
         nextButton.onClick.AddListener(ShowNextDialogStep);
     }
 
-    public void TogglePhone()
-    {
-        phonePanel.SetActive(!phonePanel.activeSelf);
-    }
+    
 
     public void OpenCallPanel()
     {
-        phonePanel.SetActive(false);
+        
         callPanel.SetActive(true);
         numberDisplay.text = "";
         dialedNumber = "";
@@ -118,7 +114,7 @@ public class PhoneController : MonoBehaviour
     public void ExitCallPanel()
     {
         callPanel.SetActive(false);
-        phonePanel.SetActive(true);
+        
     }
 
     // Dial buttons
