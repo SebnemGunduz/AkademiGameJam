@@ -4,7 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Cat
   - Dog
   - FirstTrigger
   - Toy
@@ -12,6 +11,8 @@ TagManager:
   - "\xC7eki\xE7"
   - Tutkal
   - Vida
+  - Adult
+  - Child
   layers:
   - Default
   - TransparentFX

@@ -23,15 +23,15 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(DialogueTrigger trigger, string characterTag)
     {
         // Trigger’dan doðru listeyi al
-        if (characterTag == "Dog")
-            currentDialogues = trigger.dogDialogues;
-        else if (characterTag == "Cat")
-            currentDialogues = trigger.catDialogues;
+        if (characterTag == "Adult")
+            currentDialogues = trigger.AdultDialogues;
+        else if (characterTag == "Child")
+            currentDialogues = trigger.ChildDialogues;
 
         if (currentDialogues == null || currentDialogues.Count == 0)
             return;
 
-        currentIndex = 0;
+        currentIndex = -1;
         dialoguePanel.SetActive(true);
         ShowDialogue(currentIndex);
     }
@@ -44,9 +44,10 @@ public class DialogueManager : MonoBehaviour
 
     private void NextDialogue()
     {
-        if (currentIndex + 1 < currentDialogues.Count)
+        currentIndex++;
+
+        if (currentIndex < currentDialogues.Count)
         {
-            currentIndex++;
             ShowDialogue(currentIndex);
         }
         else
