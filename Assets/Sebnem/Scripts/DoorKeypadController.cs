@@ -10,13 +10,13 @@ public class DoorKeypadController : MonoBehaviour
     public AudioClip wrongPasswordAudio;   // Yanlýþ þifre sesi
     public AudioSource audioSource;
 
-    private string correctPassword = "8358"; // Doðru þifre
+    private string correctPassword = "83589"; // Doðru þifre
     private string enteredCode = ""; // Kullanýcýnýn girdiði þifreyi tutan string
 
     private void Start()
     {
         codeText.text = "";
-        
+        codeText.color = Color.black; // Baþlangýç rengi siyah
     }
 
     public void OnDialButtonPressed(string buttonValue)
@@ -25,7 +25,6 @@ public class DoorKeypadController : MonoBehaviour
         {
             enteredCode += buttonValue;
             codeText.text = enteredCode;
-           
         }
     }
 
@@ -33,7 +32,7 @@ public class DoorKeypadController : MonoBehaviour
     {
         enteredCode = "";
         codeText.text = "";
-        
+        codeText.color = Color.black; // Renk temizlendiðinde siyaha dön
     }
 
     public void CheckPassword()
@@ -45,6 +44,7 @@ public class DoorKeypadController : MonoBehaviour
         else
         {
             audioSource.clip = wrongPasswordAudio;
+            Debug.Log("Yanlýþ þifre girildi!");
             audioSource.Play();
             codeText.color = Color.red;
             enteredCode = "";
@@ -73,5 +73,9 @@ public class DoorKeypadController : MonoBehaviour
     public void OnButton0Pressed() => OnDialButtonPressed("0");
 
     public void OnButtonCPressed() => ClearCode();
-    public void OnButtonEPressed() => CheckPassword();
+    public void OnButtonEPressed()
+    {
+        Debug.Log("E butonuna basýldý!");
+        CheckPassword();
+    }
 }
