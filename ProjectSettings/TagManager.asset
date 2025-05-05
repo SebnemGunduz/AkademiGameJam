@@ -13,6 +13,10 @@ TagManager:
   - Vida
   - Adult
   - Child
+  - Scissors
+  - NeedleAndThread
+  - Cotton
+  - Glue
   layers:
   - Default
   - TransparentFX
