@@ -29,6 +29,7 @@ public class DialogueManager1 : MonoBehaviour
     public TextMeshProUGUI dialogueText;                  // Diyalog metni
     public Button nextButton;                  // "Sonraki" butonu
     public List<ImageDialogue> Images;
+    public string nextSceneName;
 
     private int currentSpriteIndex = 0;
     private int currentDialogueIndex = 0;
@@ -61,6 +62,7 @@ public class DialogueManager1 : MonoBehaviour
             // Diyaloglar bitti, istersen sahne geçiþi yapýlabilir
             Debug.Log("Tüm diyaloglar tamamlandý!");
             dialoguePanel.SetActive(false);
+            SceneManager.LoadScene(nextSceneName);
             return;
         }
 
