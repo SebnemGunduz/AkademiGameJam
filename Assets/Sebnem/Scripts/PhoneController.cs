@@ -4,6 +4,11 @@ using TMPro;
 
 public class PhoneController : MonoBehaviour
 {
+    public AudioSource audioSource;
+    public AudioClip dialSound;
+    public AudioClip correctNumberSound;
+    public AudioClip wrongNumberSound;
+
     public GameObject phoneButton;
     public GameObject callPanel;
     public GameObject dialogPanel;
@@ -67,8 +72,12 @@ public class PhoneController : MonoBehaviour
         {
             dialedNumber += digit;
             numberDisplay.text = dialedNumber;
+
+            // Tuþ sesi
+            if (dialSound != null) audioSource.PlayOneShot(dialSound);
         }
     }
+
 
     public void OnDeleteButtonPressed()
     {
@@ -83,12 +92,19 @@ public class PhoneController : MonoBehaviour
     {
         if (dialedNumber == correctNumber)
         {
+            if (correctNumberSound != null) audioSource.PlayOneShot(correctNumberSound);
+
             callPanel.SetActive(false);
             dialogPanel.SetActive(true);
             currentStepIndex = 0;
             ShowDialogStep(currentStepIndex);
         }
+        else
+        {
+            if (wrongNumberSound != null) audioSource.PlayOneShot(wrongNumberSound);
+        }
     }
+
 
     private void ShowDialogStep(int index)
     {
@@ -107,8 +123,15 @@ public class PhoneController : MonoBehaviour
         else
         {
             dialogPanel.SetActive(false); // Diyaloglar bitti
+            Invoke("GoToFinishScene", 1f); // 1 saniye sonra sahne geç
         }
     }
+
+    private void GoToFinishScene()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Finish");
+    }
+
 
     // Arama panelinden çýkýþ fonksiyonu
     public void ExitCallPanel()
