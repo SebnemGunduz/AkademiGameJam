@@ -1,0 +1,27 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/StylishEsper/Freeloader/LoadingScreens/Horror/HorrorLoadingScreen.uss?fileID=7433441132597879392&amp;guid=af818355ceb3dbb4a968d805cc70a9cd&amp;type=3#HorrorLoadingScreen" />
+    <ui:VisualElement name="Root" class="root" style="flex-grow: 1; background-color: rgb(0, 0, 0);">
+        <ui:VisualElement name="BackgroundTwo" class="background scaleDown scaleUp" style="transition-property: scale, opacity; transition-duration: 3s, 0.5s; transition-timing-function: ease-in-out, ease; transition-delay: 1s, 0s;" />
+        <ui:VisualElement name="BackgroundOne" class="background scaleDown scaleUp" style="transition-property: scale, opacity; transition-duration: 3s, 0.5s; transition-timing-function: ease-in-out, ease; transition-delay: 1s, 0s;" />
+        <ui:VisualElement style="flex-grow: 1; padding-top: 36px; padding-right: 36px; padding-bottom: 36px; padding-left: 36px;">
+            <ui:VisualElement name="TipsContainer" class="tipsContainer">
+                <ui:Label tabindex="-1" text="Tip" parse-escape-sequences="true" display-tooltip-when-elided="true" name="TipsTitleLabel" class="h1" />
+                <ui:Label tabindex="-1" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." parse-escape-sequences="true" display-tooltip-when-elided="true" name="TipLabel" class="paragraph heightZero heightFull" style="white-space: normal; overflow: hidden; flex-shrink: 1; flex-grow: 1;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; max-height: 20%; min-height: 20%; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; opacity: 1;">
+            <ui:VisualElement name="LoadingContent" style="flex-grow: 1; justify-content: flex-end; padding-top: 36px; padding-right: 36px; padding-bottom: 36px; padding-left: 36px; flex-direction: row;">
+                <ui:VisualElement style="flex-grow: 1; justify-content: flex-end;">
+                    <ui:Label tabindex="-1" text="Loading... 100%" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LoadingLabel" class="h1 fadeIn fadeOut" style="margin-bottom: 16px;" />
+                    <ui:VisualElement name="LoadingBar" class="loadingBar" style="overflow: hidden; background-image: url(&quot;project://database/Assets/StylishEsper/Freeloader/Sprites/horror_loading_bar.png?fileID=2800000&amp;guid=cfc686da8ee2ca644b7d8c8b048804f5&amp;type=3#horror_loading_bar&quot;);" />
+                </ui:VisualElement>
+                <ui:VisualElement name="LoadingIconContainer" style="flex-grow: 1; max-width: 128px; justify-content: flex-end; align-items: center;">
+                    <ui:VisualElement name="SpinnerIcon" style="flex-grow: 1; max-width: 64px; max-height: 64px; background-image: url(&quot;project://database/Assets/StylishEsper/Freeloader/Sprites/scythe.png?fileID=2800000&amp;guid=f188f4a746192ba42bfec7e832413811&amp;type=3#scythe&quot;); min-width: 64px; min-height: 64px; align-self: flex-end; -unity-background-image-tint-color: rgb(255, 0, 0);" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="ContinueContent" style="flex-grow: 1; padding-top: 36px; padding-right: 36px; padding-bottom: 36px; padding-left: 36px; flex-direction: column; position: absolute; max-width: 100%; max-height: 100%; min-width: 100%; min-height: 100%; justify-content: flex-end;">
+                <ui:Label tabindex="-1" text="Continue" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ContinueLabel" class="h1 fadeIn fadeOut" style="display: flex; -unity-background-scale-mode: stretch-to-fill;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

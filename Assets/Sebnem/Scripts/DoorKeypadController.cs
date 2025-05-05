@@ -5,18 +5,35 @@ using UnityEngine.SceneManagement;
 
 public class DoorKeypadController : MonoBehaviour
 {
-    public TextMeshProUGUI codeText; // Kodlarý yazdýracaðýmýz TextMeshPro
-    public AudioClip correctPasswordAudio; // Doðru þifre sesi
-    public AudioClip wrongPasswordAudio;   // Yanlýþ þifre sesi
-    public AudioSource audioSource;
+    [Header("UI ve Ses")]
+    public GameObject keypadPanel;                 // Þifre paneli
+    public TextMeshProUGUI codeText;               // Kod ekraný
+    public AudioClip correctPasswordAudio;         // Doðru þifre sesi
+    public AudioClip wrongPasswordAudio;           // Yanlýþ þifre sesi
+    public AudioSource audioSource;                // Ses oynatýcý
 
-    private string correctPassword = "83589"; // Doðru þifre
-    private string enteredCode = ""; // Kullanýcýnýn girdiði þifreyi tutan string
+    [Header("Þifre Ayarlarý")]
+    private string correctPassword = "83589";      // Doðru þifre
+    private string enteredCode = "";               // Girilen þifre
 
     private void Start()
     {
         codeText.text = "";
-        codeText.color = Color.black; // Baþlangýç rengi siyah
+        codeText.color = Color.black;
+        keypadPanel.SetActive(false);              // Baþta panel kapalý
+    }
+
+    //  Tek tuþla aç/kapa
+    public void ToggleKeypadPanel()
+    {
+        bool isActive = keypadPanel.activeSelf;
+        keypadPanel.SetActive(!isActive);
+
+        if (!isActive)
+        {
+            // Panel açýldýðýnda sýfýrla
+            ClearCode();
+        }
     }
 
     public void OnDialButtonPressed(string buttonValue)
@@ -32,7 +49,7 @@ public class DoorKeypadController : MonoBehaviour
     {
         enteredCode = "";
         codeText.text = "";
-        codeText.color = Color.black; // Renk temizlendiðinde siyaha dön
+        codeText.color = Color.black;
     }
 
     public void CheckPassword()
@@ -61,6 +78,7 @@ public class DoorKeypadController : MonoBehaviour
         Debug.Log("Doðru þifre girildi!");
     }
 
+    // Tuþlar
     public void OnButton1Pressed() => OnDialButtonPressed("1");
     public void OnButton2Pressed() => OnDialButtonPressed("2");
     public void OnButton3Pressed() => OnDialButtonPressed("3");

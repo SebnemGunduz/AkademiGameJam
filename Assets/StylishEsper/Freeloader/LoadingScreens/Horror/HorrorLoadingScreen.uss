@@ -1,0 +1,120 @@
+.paragraph {
+    color: rgb(213, 213, 213);
+    font-size: 26px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    letter-spacing: 4px;
+    word-spacing: 4px;
+    -unity-font-definition: initial;
+    -unity-font: url("project://database/Assets/StylishEsper/Freeloader/Fonts/Creepster/Creepster-Regular.ttf?fileID=12800000&guid=384febdf1515aa84c958752f7718a1c6&type=3#Creepster-Regular");
+}
+
+.h1 {
+    color: rgb(255, 255, 255);
+    font-size: 46px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    -unity-font-definition: initial;
+    -unity-font: url("project://database/Assets/StylishEsper/Freeloader/Fonts/Creepster/Creepster-Regular.ttf?fileID=12800000&guid=384febdf1515aa84c958752f7718a1c6&type=3#Creepster-Regular");
+}
+
+.loadingBar {
+    flex-grow: 1;
+    max-height: 24px;
+    transition-duration: 0.4s;
+}
+
+.tipsContainer {
+    max-width: 40%;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-left-color: rgb(255, 0, 0);
+    border-right-color: rgb(255, 0, 0);
+    border-top-color: rgb(255, 0, 0);
+    border-bottom-color: rgb(255, 0, 0);
+    padding-top: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.heightFull {
+    max-height: 100%;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+}
+
+.heightZero {
+    max-height: 0;
+    transition-duration: 0.5s;
+    transition-delay: 0s;
+    transition-timing-function: ease-in-out;
+}
+
+.root {
+    transition-duration: 0.5s;
+}
+
+.root:disabled {
+    opacity: 0;
+}
+
+.fadeOut {
+    opacity: 0;
+    transition-duration: 0.5s;
+}
+
+.fadeIn {
+    opacity: 1;
+    transition-duration: 0.5s;
+}
+
+.background {
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    flex-grow: 1;
+    position: absolute;
+    transition-duration: 0.5s;
+    opacity: 1;
+    transition-delay: 0s;
+    transition-property: opacity;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.background:disabled {
+    opacity: 0;
+}
+
+.scaleDown {
+    scale: 1 1;
+    transition-property: scale;
+    transition-duration: 3s;
+    transition-delay: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.scaleUp {
+    scale: 1.05 1.05;
+    transition-property: scale;
+    transition-duration: 3s;
+    transition-delay: 1s;
+    transition-timing-function: ease-in-out;
+}
