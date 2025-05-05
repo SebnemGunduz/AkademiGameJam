@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using TMPro;
+using System.Collections;
 
 public class DialogueManager1 : MonoBehaviour
 {
@@ -59,10 +60,9 @@ public class DialogueManager1 : MonoBehaviour
     {
         if (currentSpriteIndex >= Images.Count)
         {
-            // Diyaloglar bitti, istersen sahne geçiþi yapýlabilir
             Debug.Log("Tüm diyaloglar tamamlandý!");
             dialoguePanel.SetActive(false);
-            SceneManager.LoadScene(nextSceneName);
+            StartCoroutine(DelayedSceneLoad()); //  1 saniye gecikmeli sahne geçiþi
             return;
         }
 
@@ -70,12 +70,18 @@ public class DialogueManager1 : MonoBehaviour
 
         if (currentDialogueIndex < currentImageDialogue.Chars.Count)
         {
-            // Mevcut metni ve karakter görselini yükle
             var currentCharDialogue = currentImageDialogue.Chars[currentDialogueIndex];
             charImage.sprite = currentCharDialogue.CharImage;
             dialogueText.text = currentCharDialogue.CharText;
         }
     }
+
+    private IEnumerator DelayedSceneLoad()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(nextSceneName);
+    }
+
 
     private void NextDialogue()
     {
