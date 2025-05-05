@@ -215,6 +215,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 448928329956134851, guid: 0f359d9589540f44a9bd789f96228707, type: 3}
+      propertyPath: isCanWalk
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 610095728724078450, guid: 0f359d9589540f44a9bd789f96228707, type: 3}
       propertyPath: m_FlipY
       value: 0
