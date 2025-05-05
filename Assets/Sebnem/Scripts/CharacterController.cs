@@ -4,7 +4,8 @@ public class CharacterSwitcher : MonoBehaviour
 {
     private Animator animator;
     private SpriteRenderer spriteRenderer;
-    private bool isDog = true; // Baþlangýçta köpek
+    private bool isAdult = true; // Baþlangýçta köpek
+    public bool isCanWalk;
 
     public float moveSpeed = 5f;
 
@@ -20,43 +21,53 @@ public class CharacterSwitcher : MonoBehaviour
 
     void Update()
     {
-        // R tuþuna basýnca karakteri deðiþtir
-        if (Input.GetKeyDown(KeyCode.R))
+        if (isCanWalk)
         {
-            isDog = !isDog;
-
-            if (isDog)
+            // R tuþuna basýnca karakteri deðiþtir
+            if (Input.GetKeyDown(KeyCode.R))
             {
-                animator.Play("IdleAdult");
-                gameObject.tag = "Adult";
+                isAdult = !isAdult;
+
+                if (isAdult)
+                {
+                    animator.Play("IdleAdult");
+                    gameObject.tag = "Adult";
+                }
+                else
+                {
+                    animator.Play("IdleChild");
+                    gameObject.tag = "Child";
+                }
+            }
+
+            // Hareket girdisi
+            float moveInput = Input.GetAxisRaw("Horizontal");
+            Vector3 movement = new Vector3(moveInput, 0f, 0f);
+            transform.position += movement * moveSpeed * Time.deltaTime;
+
+            // Sprite yönü
+            if (moveInput != 0)
+            {
+                spriteRenderer.flipX = moveInput < 0;
+
+                // Hareket animasyonlarý
+                if (isAdult)
+                    animator.Play("RunAdult");
+                else
+                    animator.Play("RunChild");
             }
             else
             {
-                animator.Play("IdleChild");
-                gameObject.tag = "Child";
+                // Idle animasyonlarý
+                if (isAdult)
+                    animator.Play("IdleAdult");
+                else
+                    animator.Play("IdleChild");
             }
-        }
-
-        // Hareket girdisi
-        float moveInput = Input.GetAxisRaw("Horizontal");
-        Vector3 movement = new Vector3(moveInput, 0f, 0f);
-        transform.position += movement * moveSpeed * Time.deltaTime;
-
-        // Sprite yönü
-        if (moveInput != 0)
-        {
-            spriteRenderer.flipX = moveInput < 0;
-
-            // Hareket animasyonlarý
-            if (isDog)
-                animator.Play("RunAdult");
-            else
-                animator.Play("RunChild");
         }
         else
         {
-            // Idle animasyonlarý
-            if (isDog)
+            if (isAdult)
                 animator.Play("IdleAdult");
             else
                 animator.Play("IdleChild");

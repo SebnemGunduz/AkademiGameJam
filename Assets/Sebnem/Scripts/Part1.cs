@@ -16,9 +16,10 @@ public class Part1 : MonoBehaviour
     public List<string> dialogues;
     public List<Sprite> images;
 
+    public CharacterSwitcher characterController;
     private int currentIndex = 0;
 
-    void Awake()
+    void Start()
     {
         // Her þey hazýr mý kontrol et
         if (dialoguePanel == null || dialogueText == null || characterImage == null || nextButton == null)
@@ -29,7 +30,6 @@ public class Part1 : MonoBehaviour
 
         // Paneli aç ve oyunu durdur
         dialoguePanel.SetActive(true);
-        Time.timeScale = 0f;
 
         // Ýlk diyaloðu göster
         if (dialogues.Count > 0)  // Diyaloglarýn olup olmadýðýný kontrol et
@@ -43,6 +43,7 @@ public class Part1 : MonoBehaviour
 
     void ShowDialogue(int index)
     {
+        characterController.isCanWalk = false;
         // Eðer index geçerli deðilse, diyaloðu göstermiyoruz.
         if (index >= 0 && index < dialogues.Count)
         {
@@ -83,7 +84,7 @@ public class Part1 : MonoBehaviour
 
     void EndDialogue()
     {
+        characterController.isCanWalk = true;
         dialoguePanel.SetActive(false); // Paneli kapat
-        Time.timeScale = 1f; // Oyunun zamanýný normalleþtir
     }
 }
