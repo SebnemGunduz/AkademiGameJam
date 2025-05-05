@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 922ab17649dc9cc439bd78c2e57b1fcb, type: 3}
-  m_Name: teddyBear_ToyData
+  m_Name: bunny_ToyData
   m_EditorClassIdentifier: 
-  toyName: Teddy Bear
+  toyName: Bunny
   requiredTools:
-  - {fileID: 5616366774545298972, guid: 09e99912d4938904b8a9592e19f782ad, type: 3}
   - {fileID: 1344838516224423609, guid: 3fb5c29f06f314a478ba478cfd8c30e9, type: 3}
-  - {fileID: 1328614054406259814, guid: b76a5e7d8660f9d48903892450c1f0fd, type: 3}
   - {fileID: 9112202104258879302, guid: 546bbae2b23d3c041a05e5c2d1e52dbe, type: 3}
-  toyImage: {fileID: 21300000, guid: b3c93f692a2950241929fbb75725fd9b, type: 3}
-  toyFixedImage: {fileID: 21300000, guid: b1462bc5b841c6e489827ada407dba39, type: 3}
+  - {fileID: 5616366774545298972, guid: 09e99912d4938904b8a9592e19f782ad, type: 3}
+  - {fileID: 9203652570906795603, guid: a59ef9c07284ec84a97e09fad7c73fa3, type: 3}
+  toyImage: {fileID: 21300000, guid: 10c81ea8d6c5f444d91b828896df7ef7, type: 3}
+  toyFixedImage: {fileID: 21300000, guid: 62334b5a03536e9458d65fb8e95fe0a5, type: 3}
