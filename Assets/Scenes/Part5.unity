@@ -5742,7 +5742,7 @@ MonoBehaviour:
   - text: "Ve bir g\xFCn, o k\xFC\xE7\xFCc\xFCk hallerimizi \xF6zlemeye ba\u015Flar\u0131z."
     image: {fileID: 21300000, guid: 542801d03100ea24599248cb3046a402, type: 3}
   - text: "Ko\u015Farak eve d\xF6nmeyi, yere d\xFC\u015F\xFCp g\xFClmeyi,"
-    image: {fileID: 21300000, guid: 89740efb3668d4349818d809d77cc24d, type: 3}
+    image: {fileID: 21300000, guid: 542801d03100ea24599248cb3046a402, type: 3}
   - text: "bir pamuk \u015Fekerin d\xFCnyay\u0131 g\xFCzelle\u015Ftirmesini..."
     image: {fileID: 21300000, guid: 542801d03100ea24599248cb3046a402, type: 3}
   - text: "\u0130\xE7indeki \xE7ocu\u011Fu kaybetmeden y\xFCr\xFCyebiliyorsan\u2026"
