@@ -4,6 +4,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class DropHandler : MonoBehaviour, IDropHandler
 {
@@ -16,12 +17,29 @@ public class DropHandler : MonoBehaviour, IDropHandler
     private Stack<GameObject> expectedTools = new Stack<GameObject>();
     private List<GameObject> spawnedTools = new List<GameObject>(); // Oluşan tool instanceları
 
+    private Image toyImage_;
+
+    private void Awake()
+    {
+        // Örnek yol: "Canvas/RepairPanel/ToyImage"
+        GameObject imageObj = GameObject.Find("Canvas/repairPanel/toyImage");
+        if (imageObj != null)
+        {
+            toyImage_ = imageObj.GetComponent<Image>();
+        }
+    }
     public void SetCurrentToy(GameObject toy)
     {
         currentToy = toy.GetComponent<Toy>();
         if (currentToy != null && currentToy.toyData != null)
         {
             SetupRepairSequence(currentToy.toyData);
+
+            // Oyuncağın sprite'ını panelde göster
+            if (toyImage_ != null && currentToy.toyData.toyImage != null)
+            {
+                toyImage_.sprite = currentToy.toyData.toyImage;
+            }
         }
     }
 
