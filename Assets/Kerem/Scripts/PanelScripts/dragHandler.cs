@@ -10,13 +10,14 @@ public class dragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     private CanvasGroup canvasGroup;
     private Vector3 originalPosition;
 
-    [SerializeField] private Canvas canvas;
+    private Canvas canvas;
 
     void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
         originalPosition = transform.position;
+        canvas = GetComponentInParent<Canvas>(); // En yakın Canvas'ı bulur
     }
 
     public void OnBeginDrag(PointerEventData eventData)

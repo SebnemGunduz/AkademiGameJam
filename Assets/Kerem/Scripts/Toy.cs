@@ -6,7 +6,14 @@ public class Toy : MonoBehaviour
 {
     public GameObject repairPanel;
     private bool isFixed = false;
+    public ToyData toyData;
+    public ToyData GetData() => toyData;
+    private ToyInteractor interactor;
 
+    private void Awake()
+    {
+        interactor = GetComponent<ToyInteractor>();
+    }
     public void OpenRepairPanel()
     {
         if (!isFixed)
@@ -25,8 +32,18 @@ public class Toy : MonoBehaviour
     public void MarkAsFixed()
     {
         isFixed = true;
-        gameObject.SetActive(false); // Oyuncağı sahneden kaldır
-        Part4Manager.Instance.IncreaseScore();
+        //gameObject.SetActive(false); // Oyuncağı sahneden kaldır
+        interactor.GetRepairButton().gameObject.SetActive(false);
+        
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        if (sr != null && toyData.toyFixedImage != null)
+        {
+            sr.sprite = toyData.toyFixedImage;
+        }
+        Debug.Log("Tamir Edildi!");
+        // Bölüm yöneticisine bildir
+        Part4Manager.Instance?.ToyFixed();
+        //art4Manager.Instance.IncreaseScore();
     }
 
     public bool IsFixed()
