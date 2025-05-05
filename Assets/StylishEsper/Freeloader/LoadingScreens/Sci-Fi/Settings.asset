@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e554d3c2fc292488cff3c7924332f2, type: 3}
+  m_Name: Settings
+  m_EditorClassIdentifier: 
+  settingsName: Sci-Fi Settings
+  tipAnimatorPseudoClassName: fadeOut
+  loadingLabelAnimatorPseudoClassName: fadeOut
+  continueLabelAnimatorPseudoClassName: fadeOut
+  backgroundScaleAnimatorPseudoClassName: scaleUp
+  hideBar: 0
+  defaultLoadingText: Loading...
+  showPercentage: 1
+  showSpinner: 1
+  spinnerSpeed: 1
+  spinnerIcon: {fileID: 2800000, guid: 416b48e90c3069846bc6e1569dc3b7d7, type: 3}
+  backgrounds:
+  - {fileID: 2800000, guid: 2093116d382f9b84d998b282ce046c64, type: 3}
+  - {fileID: 2800000, guid: 08cda9ddb0a9a1847b9975bde3cb236f, type: 3}
+  backgroundDisplayLength: 6
+  enableBackgroundZoom: 1
+  showTips: 1
+  tips:
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+    qui officia deserunt mollit anim id est laborum.
+  - This is the second tip!
+  tipsTitle: Tip
+  tipDisplayLength: 6
+  requireInputToContinue: 1
+  continueText: Continue

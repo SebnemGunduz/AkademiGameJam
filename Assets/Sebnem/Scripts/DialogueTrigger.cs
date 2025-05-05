@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class DialogueTrigger : MonoBehaviour
 {
@@ -89,8 +90,15 @@ public class DialogueTrigger : MonoBehaviour
 
             if (goToNextSceneAfterDialogue && nextSceneBool)
             {
-                SceneManager.LoadScene(nextSceneName);
+                StartCoroutine(DelayedSceneLoad()); //  Gecikmeli yükleme baþlatýlýyor
             }
         }
     }
+
+    private IEnumerator DelayedSceneLoad()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(nextSceneName);
+    }
 }
+

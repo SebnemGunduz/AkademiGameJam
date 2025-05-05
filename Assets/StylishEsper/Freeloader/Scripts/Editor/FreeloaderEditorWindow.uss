@@ -1,0 +1,157 @@
+.loadingScreenItem {
+    max-width: 320px;
+    min-width: 320px;
+    max-height: 180px;
+    min-height: 180px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    background-image: url("project://database/Assets/StylishEsper/Art/Animatables_screenshot_bg.png?fileID=2800000&guid=bc4c55786f1a8b846a196ec7bcc8ebbf&type=3#Animatables_screenshot_bg");
+    -unity-background-scale-mode: stretch-to-fill;
+    -unity-background-image-tint-color: rgb(194, 194, 194);
+    transition-duration: 0.2s;
+}
+
+.loadingScreenItem:hover {
+    max-width: 384px;
+    min-width: 384px;
+    max-height: 216px;
+    min-height: 216px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    background-image: url("project://database/Assets/StylishEsper/Art/Animatables_screenshot_bg.png?fileID=2800000&guid=bc4c55786f1a8b846a196ec7bcc8ebbf&type=3#Animatables_screenshot_bg");
+    -unity-background-scale-mode: stretch-to-fill;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.loadingScreenItem:active {
+    max-width: 384px;
+    min-width: 384px;
+    max-height: 216px;
+    min-height: 216px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    background-image: url("project://database/Assets/StylishEsper/Art/Animatables_screenshot_bg.png?fileID=2800000&guid=bc4c55786f1a8b846a196ec7bcc8ebbf&type=3#Animatables_screenshot_bg");
+    -unity-background-scale-mode: stretch-to-fill;
+    -unity-background-image-tint-color: rgb(133, 220, 255);
+}
+
+.endSpacing {
+    max-width: 100px;
+    min-width: 100px;
+}
+
+.itemSpacing {
+    max-width: 20px;
+    min-width: 20px;
+}
+
+.settingsButton {
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    -unity-background-scale-mode: scale-to-fit;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    background-image: url("project://database/Assets/StylishEsper/Freeloader/Sprites/settings.png?fileID=2800000&guid=69dc4f149032f4149ac072e6acd95671&type=3#settings");
+    -unity-background-image-tint-color: rgb(104, 104, 104);
+    height: 16px;
+    width: 16px;
+    align-self: center;
+    transition-duration: 0.2s;
+}
+
+.settingsButton:hover {
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    -unity-background-scale-mode: scale-to-fit;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    background-image: url("project://database/Assets/StylishEsper/Freeloader/Sprites/settings.png?fileID=2800000&guid=69dc4f149032f4149ac072e6acd95671&type=3#settings");
+    -unity-background-image-tint-color: rgb(185, 185, 185);
+}
+
+.settingsButton:active {
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    -unity-background-scale-mode: scale-to-fit;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    background-image: url("project://database/Assets/StylishEsper/Freeloader/Sprites/settings.png?fileID=2800000&guid=69dc4f149032f4149ac072e6acd95671&type=3#settings");
+    -unity-background-image-tint-color: rgb(133, 220, 255);
+}
+
+.settings {
+    max-height: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    position: absolute;
+    transition-duration: 0.2s;
+}
+
+.settings:disabled {
+    max-height: 100%;
+    min-height: 100%;
+    max-width: 0;
+    min-width: 0;
+    position: absolute;
+    opacity: 0;
+}
+
+.h2 {
+    font-size: 14px;
+    -unity-font-style: bold;
+    border-bottom-color: rgb(89, 89, 89);
+    border-bottom-width: 2px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+.h1 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
