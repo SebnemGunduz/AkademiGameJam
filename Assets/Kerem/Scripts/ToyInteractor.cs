@@ -35,6 +35,7 @@ public class ToyInteractor : MonoBehaviour
     {
         Debug.Log("Buton Çalıştı!");
         panel.SetActive(true);
+
     }
 
 }
