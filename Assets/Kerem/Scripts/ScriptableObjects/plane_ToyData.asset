@@ -18,5 +18,5 @@ MonoBehaviour:
   - {fileID: 328440567062198262, guid: 4278c1790bae06a4f9563bf32bc6b393, type: 3}
   - {fileID: 9112202104258879302, guid: 546bbae2b23d3c041a05e5c2d1e52dbe, type: 3}
   - {fileID: 9203652570906795603, guid: a59ef9c07284ec84a97e09fad7c73fa3, type: 3}
-  toyImage: {fileID: 0}
-  toyFixedImage: {fileID: 0}
+  toyImage: {fileID: 21300000, guid: 832819cb5b2d2f148a61e0b8d42a7a02, type: 3}
+  toyFixedImage: {fileID: 21300000, guid: 08b008005f4d26b4ca0807459527b891, type: 3}

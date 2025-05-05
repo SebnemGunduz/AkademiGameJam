@@ -10,6 +10,7 @@ public class Part4Manager : MonoBehaviour
     private int fixedToyCount = 0;
     [SerializeField] TextMeshProUGUI scoreText; // UI'da skoru göstermek için
     [SerializeField] int totalToyCount;
+    [SerializeField] GameObject dialog;
 
     void Awake()
     {
@@ -27,7 +28,8 @@ public class Part4Manager : MonoBehaviour
         if (fixedToyCount >= totalToyCount)
         {
             Debug.Log("Tüm oyuncaklar tamir edildi! Bölüm geçiliyor...");
-            LoadNextScene();
+            dialog.SetActive(true);
+            //LoadNextScene();
         }
     }
 
