@@ -5,6 +5,8 @@
 "Bazı anılar büyümez, biz küçülürüz."
 ```
 
+[İNDİR](https://drive.google.com/file/d/1DxKS8oqgB7Jpfx-l4r0uNwz_v-n2nbhE/view?usp=sharing)
+
 ## 📖 Hakkında
 "When I Was Young", Unity ile geliştirilen 2 boyutlu bir görsel roman ve etkileşimli mini oyun deneyimi sunar. Oyuncu, psikolojik bir yolculuğa çıkan bir kadının çocukluk anılarını tekrar yaşayarak kendini keşfetmesini konu alır.
 
